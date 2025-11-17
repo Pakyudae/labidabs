@@ -22,8 +22,7 @@
       min-height: 100vh;
       overflow: hidden;
       position: relative;
-      text-align: center;
-      padding: 20px;
+      padding: 15px;
     }
 
     .container {
@@ -31,11 +30,14 @@
       z-index: 2;
       width: 100%;
       max-width: 600px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
     }
 
     .message-box {
       background: rgba(255, 255, 255, 0.95);
-      padding: 50px 40px;
+      padding: 30px 25px;
       border-radius: 25px;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
       backdrop-filter: blur(10px);
@@ -43,6 +45,9 @@
       overflow: hidden;
       animation: popin 1s ease-out;
       border: 1px solid rgba(255, 255, 255, 0.3);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .message-box::before {
@@ -57,9 +62,9 @@
 
     h1 {
       font-family: 'Dancing Script', cursive;
-      font-size: 3.5em;
+      font-size: 2.8em;
       color: #d1005a;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       position: relative;
       display: inline-block;
@@ -77,19 +82,37 @@
     }
 
     .message-content {
-      font-size: 1.15em;
+      font-size: 1.1em;
       color: #5a0036;
-      line-height: 1.7em;
+      line-height: 1.6em;
       text-align: justify;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    /* Custom scrollbar for webkit browsers */
+    .message-content::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .message-content::-webkit-scrollbar-track {
+      background: rgba(255, 182, 193, 0.2);
+      border-radius: 10px;
+    }
+
+    .message-content::-webkit-scrollbar-thumb {
+      background: #ff3366;
+      border-radius: 10px;
     }
 
     .signature {
       font-family: 'Great Vibes', cursive;
-      font-size: 2em;
+      font-size: 1.8em;
       color: #d1005a;
-      margin-top: 20px;
       text-align: right;
+      margin-top: 15px;
     }
 
     /* Heart animation */
@@ -184,22 +207,41 @@
       100% { transform: scale(1); opacity: 1; }
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
+    /* Mobile-specific adjustments */
+    @media (max-width: 480px) {
+      .container {
+        height: 95vh;
+      }
+      
       .message-box {
-        padding: 30px 20px;
+        padding: 25px 20px;
       }
       
       h1 {
-        font-size: 2.8em;
+        font-size: 2.5em;
       }
       
       .message-content {
         font-size: 1em;
+        line-height: 1.5em;
       }
       
       .signature {
-        font-size: 1.8em;
+        font-size: 1.6em;
+      }
+    }
+
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 2.2em;
+      }
+      
+      .message-content {
+        font-size: 0.95em;
+      }
+      
+      .signature {
+        font-size: 1.4em;
       }
     }
   </style>
@@ -207,7 +249,7 @@
 <body>
   <div class="container">
     <div class="message-box">
-      <h1>To My Love ❤️</h1>
+      <h1>To My Bebi ❤️</h1>
       <div class="message-content">
         <p>
           Hello po Madam Jannine, just wanna say....... Happy 2nd! though hindi naman natin masyadong importante satin itong date na to since hindi pa naman kasal pero anyway, I just want to say na i'm so lucky to have you, thank you for being there at my lowest and thank you for supporting and helping me everytime. I know na hindi ko pa kaya maibalik or mareciprocate mga naitulong mo sakin pero once na makagraduate nako ako naman tutulong sayo sa mga needs mo, for now pagpasensyahan mo muna ko please HAHAHAHA, konting tiis na lang gagraduate nako. I'm not fond of making a long sweet message you know this naman but i tried since eto lang kaya ko maprovide sa situation ko ngayon(bawi ako next year), I'm not creative enough to make something out of nothing pero I can still make something like this. I love you more than words can ever express, and I promise to always be here for you!
