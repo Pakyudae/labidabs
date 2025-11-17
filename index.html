@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Special Message for You</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffd6e7, #ffb3c6, #ff8fab);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .message-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px 40px;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      animation: popin 1s ease-out;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .message-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #ff3366, #ff99cc);
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.5em;
+      color: #d1005a;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #ff3366, transparent);
+    }
+
+    .message-content {
+      font-size: 1.15em;
+      color: #5a0036;
+      line-height: 1.7em;
+      text-align: justify;
+      margin-bottom: 25px;
+    }
+
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2em;
+      color: #d1005a;
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    /* Heart animation */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff3366;
+      transform: rotate(-45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff3366;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    /* Floating envelope animation */
+    .envelope {
+      position: absolute;
+      width: 40px;
+      height: 30px;
+      background: #ff99cc;
+      transform: rotate(15deg);
+      animation: float-envelope 12s linear infinite;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .envelope::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 15px solid #ff99cc;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) rotate(-45deg) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(-45deg) scale(1.1);
+      }
+      100% {
+        transform: translate(calc(-50vw + 50%), -100vh) rotate(45deg) scale(1);
+        opacity: 0;
+      }
+    }
+
+    @keyframes float-envelope {
+      0% {
+        transform: translate(0, 0) rotate(15deg) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(15deg) scale(1.1);
+      }
+      100% {
+        transform: translate(calc(50vw - 50%), -100vh) rotate(-15deg) scale(1);
+        opacity: 0;
+      }
+    }
+
+    @keyframes popin {
+      0% { transform: scale(0.8); opacity: 0; }
+      70% { transform: scale(1.05); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .message-box {
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 2.8em;
+      }
+      
+      .message-content {
+        font-size: 1em;
+      }
+      
+      .signature {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="message-box">
+      <h1>To My Love ❤️</h1>
+      <div class="message-content">
+        <p>
+          Hello po Madam Jannine, just wanna say....... Happy 2nd! though hindi naman natin masyadong importante satin itong date na to since hindi pa naman kasal pero anyway, I just want to say na i'm so lucky to have you, thank you for being there at my lowest and thank you for supporting and helping me everytime. I know na hindi ko pa kaya maibalik or mareciprocate mga naitulong mo sakin pero once na makagraduate nako ako naman tutulong sayo sa mga needs mo, for now pagpasensyahan mo muna ko please HAHAHAHA, konting tiis na lang gagraduate nako. I'm not fond of making a long sweet message you know this naman but i tried since eto lang kaya ko maprovide sa situation ko ngayon(bawi ako next year), I'm not creative enough to make something out of nothing pero I can still make something like this. I love you more than words can ever express, and I promise to always be here for you!
+        </p>
+      </div>
+      <div class="signature">
+        Forever yours,<br>Bebi
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating elements -->
+  <div class="heart" style="left:10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left:25%; animation-delay: 1s;"></div>
+  <div class="heart" style="left:40%; animation-delay: 2s;"></div>
+  <div class="heart" style="left:60%; animation-delay: 0.5s;"></div>
+  <div class="heart" style="left:75%; animation-delay: 1.5s;"></div>
+  <div class="heart" style="left:90%; animation-delay: 2.5s;"></div>
+  
+  <div class="envelope" style="left:15%; animation-delay: 3s;"></div>
+  <div class="envelope" style="left:50%; animation-delay: 5s;"></div>
+  <div class="envelope" style="left:85%; animation-delay: 7s;"></div>
+
+</body>
+</html>
